@@ -18,6 +18,11 @@ public class Veterinario
     @Column(name = "nombre_veterinario",length = 50)
     private String nombreVeterinario;
 
+     //relaciones:
+     @OneToMany(mappedBy = "cedulaVeterinario")
+     @JsonManagedReference
+     private List<Consulta> listaVeterinario;
+
 }
 
 

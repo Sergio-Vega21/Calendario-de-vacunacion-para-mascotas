@@ -6,7 +6,7 @@ import lombok.*;
 
 
 @Entity
-@Table(name="encargado")
+@Table(name="tipo_vacuna")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

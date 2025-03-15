@@ -1,5 +1,9 @@
 package com.veterinaria.demo.entity;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +26,12 @@ public class Vacuna
     @JoinColumn(name = "id_tipo_vacuna")
     @JsonBackReference
     private TipoVacuna tipoVacuna;
+
+
+     @OneToMany(mappedBy = "idVacuna")
+     @JsonManagedReference
+     private List<Consulta> listaConsultas;
+     
 
     
 }

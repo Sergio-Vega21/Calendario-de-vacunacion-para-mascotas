@@ -18,11 +18,11 @@ public class EspecieRaza{
 
     //relaciones
     @ManyToOne
-    @JoinColumn(name = "id_espcie")
+    @JoinColumn(name = "id_espcie",insertable = false, updatable = false)
     @JsonBackReference
     private Especie especie;
     @ManyToOne
-    @JoinColumn(name = "id_raza")
+    @JoinColumn(name = "id_raza",insertable = false, updatable = false)
     @JsonBackReference
     private Raza raza;
 

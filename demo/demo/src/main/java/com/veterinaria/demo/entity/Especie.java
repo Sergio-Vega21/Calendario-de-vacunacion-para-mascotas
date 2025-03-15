@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 public class Especie{
 
     @Id
-    @Column(name = "id_especie", length = 4)
+    @Column(name = "id_espcie", length = 4)
     private String idEspecie;
     
     @Column(name = "nom_especie", length = 50)
