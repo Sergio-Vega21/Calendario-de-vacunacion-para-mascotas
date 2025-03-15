@@ -1,34 +1,34 @@
-package com.veterinaria.demo.service.especie;
+package com.veterinaria.demo.service.sede;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.veterinaria.demo.dao.EspecieRepository;
-import com.veterinaria.demo.entity.Especie;
+import com.veterinaria.demo.dao.SedeRepository;
+import com.veterinaria.demo.entity.Sede;
 
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class EspecieServiceImpl implements EspecieService{
+public class SedeServiceImpl implements SedeService{
 
-    private final EspecieRepository repository;
+    private final SedeRepository repository;
 
 
     @Override
-    public List<Especie> findAll() {
+    public List<Sede> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public Especie findById(String id){
-        Optional<Especie> optional = repository.findById(id);
+    public Sede findById(String id){
+        Optional<Sede> optional = repository.findById(id);
         return optional.get();
     }
 
     @Override 
-    public Especie save(Especie especie)
+    public Sede save(Sede especie)
     {
         return repository.save(especie);
     }

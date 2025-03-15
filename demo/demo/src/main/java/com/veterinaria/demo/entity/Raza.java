@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Raza
 {
     @Id

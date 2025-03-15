@@ -10,6 +10,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Encargado {
     
     @Id
@@ -18,7 +19,7 @@ public class Encargado {
     @Column(name="nombre_encargado",length = 50, nullable = false)
     private String nombreEncargado; 
     @Column(name="telefono_encargado",length = 10, nullable = false)
-    private String telefono_Encargado; 
+    private String telefonoEncargado; 
 
     //relacion:
     @OneToMany(mappedBy = "cedulaEncargado")

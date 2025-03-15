@@ -1,6 +1,8 @@
 package com.veterinaria.demo.entity;
 import java.util.List;
 import java.math.BigDecimal;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,6 +25,7 @@ public class Mascota {
     // relaciones
     @ManyToOne
     @JoinColumn(name = "cedula_encargado")
+    @JsonBackReference
     private Encargado cedulaEncargado;
 
     @OneToMany(mappedBy = "mascota")
